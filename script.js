@@ -27,6 +27,13 @@ document.querySelectorAll(".search_icon").forEach(function (ev) {
   });
 });
 
-document.querySelector(".icon").addEventListener("click", function(){
-  document.querySelector(".search-input").classList.toggle("active");
+// document.querySelector(".icon").addEventListener("click", function(){
+//   document.querySelector(".search-input").classList.toggle("active");
+// })
+
+
+document.querySelectorAll(".icon").forEach(function(el){
+  el.addEventListener("click", function(){
+    document.querySelector(".search-input").classList.toggle("active");
+  })
 })
