@@ -34,6 +34,6 @@ document.querySelectorAll(".search_icon").forEach(function (ev) {
 
 document.querySelectorAll(".icon").forEach(function(el){
   el.addEventListener("click", function(){
-    document.querySelector(".search-input").classList.toggle("active");
+   el.closest(".main-search-icon").classList.toggle("active");
   })
 })

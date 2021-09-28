@@ -1680,13 +1680,9 @@ input.search-input-box-design {
   transform: rotate(-45deg);
 }
 
-.active{
- width: 480px;
- /* border-bottom: 1px solid;
- border-left: none;
- border-right: none;
- border-top: none; */
- border-bottom: 1px
- solid;
+
+.active input {
+  width: 480px;
+  border-bottom: 1px solid;
 }
 
