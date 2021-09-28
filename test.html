@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .search-icon {
+            position: relative;
+            top: 10px;
+        } */
+
+        /* .input-field-design {
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            border: 0px 0px 0px 1px solid;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            outline: none;
+            width: 480px;
+            z-index: 0;
+            display: block;
+        } */
+
+        /* .search-input-div {
+            position: relative;
+            width: 50%;
+            margin: auto;
+            box-sizing: border-box;
+        } */
+
+
+
+
+
+
+
+        body {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        #search {
+            height: 80px;
+            width: 80px;
+            border: solid 5px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            transition: 0.3s;
+        }
+
+        #search-input {
+            height: 100%;
+            width: 0px;
+            font-size: 28px;
+            font-weight: 600;
+            background: none;
+            color: rgb(85, 85, 85);
+            border: none;
+            outline: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        #search.active {
+            width: 350px;
+        }
+
+        #search-input.active {
+            width: 260px;
+            margin-left: 16px;
+            visibility: visible;
+        }
+    </style>
+
+
+    <script>
+
+
+        const body = document.querySelector('body');
+        const searchBtn = document.querySelector('#search');
+        const searchInput = document.querySelector('#search-input');
+        let active = false;
+
+        body.addEventListener('click', (e) => {
+            if (e.target.id === 'search' || e.target.id === 'search-input' || e.target.id === 'search-icon') {
+                if (!active) {
+                    searchBtn.classList.add('active');
+                    searchInput.classList.add('active');
+                    active = true;
+                }
+            } else {
+                searchBtn.classList.remove('active');
+                searchInput.classList.remove('active');
+                searchInput.value = '';
+                active = false;
+            }
+        });
+
+
+
+
+
+
+
+
+
+        // let searchIcon = document.getElementsByClassName("search-icon");
+        // let inputArea = document.getElementsByClassName("input-field-design");
+        // function hello() {
+
+        //     if (inputArea.style.diplay === "block") {
+        //         inputArea.style.diplay = "none";
+        //     }
+
+        //     else {
+        //         inputArea.style.diplay = "block";
+        //     }
+        //     // console.log("hahah")
+        // }
+
+    </script>
+</head>
+
+<body>
+    <!-- <div class="search-input-div">
+        <img class="search-icon" onclick=" hello()" src="image/fi-rr-search.svg" alt="">
+        <input type="text" class="input-field-design">
+    </div> -->
+
+    <div id="search">
+        <i class="fas fa-search" id="search-icon"></i>
+        <form>
+          <input type="text" id="search-input" name="search" autocomplete="off">
+        </form>
+      </div>
+
+</body>
+
+</html>
