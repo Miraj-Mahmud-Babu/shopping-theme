@@ -82,8 +82,7 @@ window.addEventListener("click", function (e) {
     });
   }
 
-
-// mobile hamburger 
+  // mobile hamburger
 
   if (!e.target.closest(".main-search-icon")) {
     document.querySelectorAll(".main-search-icon").forEach(function (el) {
@@ -94,37 +93,10 @@ window.addEventListener("click", function (e) {
 
 // mobile dropdown header design
 
+document.querySelectorAll(".mobile-header-col").forEach(function (evn) {
+  evn.addEventListener("click", function () {
+    console.log("miraj");
 
-
-const modalsListItemsMobile = document.querySelector(".modals-list-items-mobile");
-const mainParentMobile = document.querySelector(".only-hamburger");
-
-document.addEventListener("click", function (event2) {
-
-    if (!event2.target.closest(".only-hamburger") && !event2.target.closest(".modals-list-items-mobile")) {
-        mainParentMobile.classList.remove("refClassMobile");
-        modalsListItemsMobile.style.visibility = "hidden";
-       
-    }
-
-    else if (event2.target.closest(".modals-list-items-mobile")) {
-        modalsListItemsMobile.style.visibility = "visible";
-        mainParentMobile.classList.add("refClassMobile");
-       
-    }
-
-    else {
-        if (modalsListItemsMobile.style.visibility === "visible") {
-            modalsListItemsMobile.style.visibility = "hidden";
-            mainParentMobile.classList.remove("refClassMobile");
-        }
-
-        else {
-            modalsListItemsMobile.style.visibility = "visible";
-            mainParentMobile.classList.add("refClassMobile");
-        }
-    }
-
-
+    evn.closest(".mobile-header-row").classList.toggle("refClassMobile");
+  });
 });
-
