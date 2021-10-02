@@ -1709,14 +1709,23 @@ input.search-input-box-design {
 }
 .search-icon-header{
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  color: black;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s;
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+font-size: 30px;
+
+color: black;
+
+cursor: pointer;
+
+position: relative;
+
+transition: all 0.3s;
+
+z-index: 2;
 }
 
 .search-icon-header span{
@@ -1807,10 +1816,10 @@ input.search-input-box-design {
 
 
 .modals-list-items-mobile {
-  position: absolute;
+  position: fixed;
   top: 0;
   /* height: 100vh; */
-  background-color: #c36e6e;
+  background-color: #ffffffeb;
   width: 100%;
   bottom: 0px;
   transform: translateX(-10px);
@@ -1838,7 +1847,8 @@ input.search-input-box-design {
 .refClassMobile .modals-list-items-mobile {
   opacity: 1;
   visibility: visible;
-  z-index: 1;
+  display: flex;
+  z-index: 2;
   bottom: -200px;
   left: 0%;
 }
@@ -1875,13 +1885,19 @@ input.search-input-box-design {
 
 li.modal-li-mobile {
   list-style: none;
+  display: flex;
   margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .modals-list-items-area-mobile {
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   margin-top: 0px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
