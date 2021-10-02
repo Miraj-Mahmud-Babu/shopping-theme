@@ -61,18 +61,17 @@ window.addEventListener("click", function (e) {
   if (!e.target.closest(".main-search-icon")) {
     document.querySelectorAll(".main-search-icon").forEach(function (el) {
       el.classList.remove("search-active");
-      
     });
   }
 
   if (!e.target.closest(".main-search-icon-header")) {
-    document.querySelectorAll(".main-search-icon-header").forEach(function (el) {
-      el.classList.remove("search-active-header");
-      // el.classList.remove("search-icon-header");
-    });
+    document
+      .querySelectorAll(".main-search-icon-header")
+      .forEach(function (el) {
+        el.classList.remove("search-active-header");
+        // el.classList.remove("search-icon-header");
+      });
   }
-
-  
 
   if (
     !e.target.closest(".position-filter-section") &&
@@ -83,3 +82,5 @@ window.addEventListener("click", function (e) {
     });
   }
 });
+
+// mobile dropdown header design

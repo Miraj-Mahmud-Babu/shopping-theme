@@ -1744,3 +1744,12 @@ input.search-input-box-design {
   align-items: center;
   justify-content: center;
 }
+
+.mobile-view-right-col{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
