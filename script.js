@@ -98,33 +98,30 @@ window.addEventListener("click", function (e) {
 
 const modalsListItemsMobile = document.querySelector(".modals-list-items-mobile");
 const mainParentMobile = document.querySelector(".only-hamburger");
-const bodySadow = document.querySelector(".body-sadow");
 
 document.addEventListener("click", function (event2) {
 
     if (!event2.target.closest(".only-hamburger") && !event2.target.closest(".modals-list-items-mobile")) {
         mainParentMobile.classList.remove("refClassMobile");
         modalsListItemsMobile.style.visibility = "hidden";
-        bodySadow.style.visibility = "hidden";
+       
     }
 
     else if (event2.target.closest(".modals-list-items-mobile")) {
         modalsListItemsMobile.style.visibility = "visible";
         mainParentMobile.classList.add("refClassMobile");
-        bodySadow.style.visibility = "visible";
+       
     }
 
     else {
         if (modalsListItemsMobile.style.visibility === "visible") {
             modalsListItemsMobile.style.visibility = "hidden";
             mainParentMobile.classList.remove("refClassMobile");
-            bodySadow.style.visibility = "hidden";
         }
 
         else {
             modalsListItemsMobile.style.visibility = "visible";
             mainParentMobile.classList.add("refClassMobile");
-            bodySadow.style.visibility = "visible";
         }
     }
 
