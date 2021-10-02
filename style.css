@@ -1929,7 +1929,7 @@ li.modal-li-mobile {
 
 .modals-list-items-area-mobile {
   /* padding: 60px 20px; */
-  margin-top: 0px;
+  margin-top: -200px;
   width: 100%;
   display: flex;
   justify-content: center;
