@@ -93,10 +93,9 @@ window.addEventListener("click", function (e) {
 
 // mobile dropdown header design
 
-document.querySelectorAll(".mobile-header-col").forEach(function (evn) {
+document.querySelectorAll(".manue-icon-mobile").forEach(function (evn) {
   evn.addEventListener("click", function () {
-    console.log("miraj");
-
     evn.closest(".mobile-header-row").classList.toggle("refClassMobile");
+    document.querySelector("body").classList.toggle("navList-visible");
   });
 });
