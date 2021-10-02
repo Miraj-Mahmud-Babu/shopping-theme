@@ -426,7 +426,7 @@ img.wislist_icon {
   bottom: 8%;
   left: 50%;
   transform: translate(-50%, 0px);
-  translateX: 50%;
+
   opacity: 0;
   -webkit-transition: opacity 0.1s ease-in;
   -moz-transition: opacity 0.1s ease-in;
